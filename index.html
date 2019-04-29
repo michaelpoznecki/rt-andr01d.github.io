@@ -1,24 +1,35 @@
 <style>
 .post {
     margin-top:100px;
-    color: black;
+    color: white;
+		font-size:210%;
 }
 .name {
-    color:black;
+    color:white;
+		font-size:250%;
 }
 
+body {
+    background-color:#696969;
+}
 
 #wrap {
    width:600px;
    margin:200px;
 }
 #left_col {
-   float:left;
-   width:300px;
+	position:relative;
+	float:left;
+	left:-170px;
+	width:300px;
+	margin-top:-150px;
 }
 #right_col {
-   float:right;
-   width:300px;
+	position:relative;
+  float:right;
+	right:-50px;
+  width:500px;
+	margin-top:-600px;
 }
 </style>
 
@@ -27,16 +38,35 @@
 <body>
 <div id="wrap">
     <div id="left_col">
-	<a href="index.html"><img src="skully.png" width="50%" height="30%"></a>
-	<h1 class=name > Andr01d </h1>
-	<h3> Follow me: </h3>
-	<a class=post href="https://github.com/rt-andr01d">Github</a>
-	<br><a class=post href="https://twitter.com/arandr_01d">Twitter</a></br>
-	<!--<a class=post href="http://michaelpoznecki.com">Personal photography website</a>-->
+	<!--<a href="index.html"><img src="skully.png" width="20%" height="10%"></a>-->
+			<h1 class=name ><img src="skully.png" width="20%" height="10%"> Andr01d </h1>
+			<h3> Follow me: </h3>
+			<a  href="https://github.com/rt-andr01d">Github</a>
+			<br><a href="https://twitter.com/arandr_01d">Twitter</a></br>
+			<hr width="1" size="500">
     </div>
     <div id="right_col">
-	<br><li><a class=post href="LFInT/LFInT.html">LFInT Development Writeup</a></li></br>
-	<br><li><a class=post href="RoCET/RoCET.html">RoCET Development Blog Post 1</a></li</br>
+			<a class=post href="LFInT/LFInT.html">LFInT Development Writeup</a>
+			<p>
+				This whole project started out as a ctf on vulnhub.com. Initially, I was doing it for the red team,
+				which had decided every week we needed a new vulnhub finished. No biggie so far, had two under my belt.
+				This one was different though. I was reading through several walkthroughs and gathering information on
+				how local file inclusion vulnerabilities worked. I had recalled several months ago I had stumbled upon
+				a writeup on someone who wrote a shell that was able to interface with a file listing script stuck
+				on a website. This gave me the idea to create a shell...
+			</p>
+			<br><li><a href="LFInT/LFInT.html">Read more</a></li></br>
+			<a class=post href="Windows/ActiveDirectory/Mimikatz1.html">Mimikatz - Dumping and passing the hashes</a>
+			<p>
+				Recently I have been caught up doing tons of homework for College, and have had little time
+				to do any research for myself. Between the homeworks and Hack the Box challenges, the one topic
+				which continues to grab my attention is Active Directory and abusing privileges on the Domain.
+				Two tools which have been my main focus are PowerSploit and Mimikatz. I have already done prese-
+				ntations for my Red Team at school about the two tools, but I want to look deeper and learn how 
+				or why these really work. Hopefully by the end of this blog post I will have explaing Mimikatz 
+				enough to understand how the modules work and why they work.
+			</p>
+			<br><li><a href="Windows/ActiveDirectory/Mimikatz1.html">Read more</a></li></br>
     </div>
 </div>
 </body>
