@@ -1,0 +1,40 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body {
+	background-color:#696969;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  background: #9C9696;
+  padding: 10px;
+}
+
+</style>
+</head>
+
+<body text=white>
+<div class="content">
+<p>
+	Active Directory is used in most corporate environments you will come across. Domains can
+	usually span quite a large area and contain many computers and forests. This can mean it can be
+	a bit overwhelming trying to get an idea of what the topology of the Domain looks like. Thankfully,
+	there is a tool built for exactly this. Bloodhound is a tool which can be used to enumerate
+	domain trusts and account privileges, and give a graphical overview of what the domain looks
+	like and paths to domain admin.
+</p>
+<p> 
+	The basic topology of my network I built looks like this:
+	<img src="images/top.png">
+	I have one forest with two domain controllers and two computers connected to the domain.
+	To give a bit more complexity, I have some users who are members of domain accounts and
+	some that are memebers of groups which are parts of other groups. 
+</div>
+</body>
+</html>
+

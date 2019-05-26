@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body {
+	background-color:#696969;
+}
+
+.content {
+  max-width: 800px;
+  margin: auto;
+  background: #9C9696;
+  padding: 10px;
+}
+
+</style>
+</head>
+
+<body text=white>
+<div class="content">
+<p>
+	Iv been doing Red Teaming / Pentesting for a while now, just not formally. Currently in college I am part of the Red Team that helps
+	train a Blue Team for the CCDC (Collegic Cyber Defense Competition) competition. I have also been participating in the CPTC (Collegic Penetration Testing Competition)
+	meetings. I recently recieved an opportunity for intern for the company [redacted] in [redacted], doing penetration testing.
+	I happen to be good friends with one of the PenTesters there, and thought it might be a good idea to ask about what I should
+	study up on. The answer was not at all surprising.
+</p>
+<p>
+	I have known for quite some time that the majority of corporate networks run on Active Directory or Microsoft Azure, but
+	it has never really come up in my quest to learn more "hacker" skills. One resource I use often is Hack The Box, which
+	if you have not heard of it and want to get into pentesting, I highly recommend. Its a bit fun just to get an invite to
+	the site, as you have to hack your way in. There are walkthroughs available but I suggest you attempt it alone first.
+	When I asked about what I should focus on leading up to the internship, he replied something along the lines of
+	"Active Directory. Learn Blood Hound and Impaket." Iv been meaning to get this personal security blog up and running
+	for a while now, and I thought it would be a perfect opportunity to blog about my learning. Since I will be blogging
+	while I learn, some points may be abstruded, so I do appologize.
+</p>
+<p>
+	First things first, set up a domain. There are AD ranges available like on Hack The Box, however these ranges are expensive
+	to operate and thus require a huge charge to have access. Back in highschool, gaming was something I held dear to my heart.
+	As I got into college, the passion started to die, and the machine was only powered on every now and then when I was having 
+	a bad day. Since I needed a range for the Domain and did not want to run a domain fully inside its own vm, I decided to go
+	ahead and install VMware ESXI on the pc. After that, setting up the domain was easy enough. The hardest part of the setup
+	was waiting for things to initialize and install. 
+</p>
+<p>
+	Heres a basic description of how I set up the Domain: A Windows Server 2012 with Active Directory installed, a backup Admin account
+	called david, and a Windows 10 VM connected to the domain so it can authenticate through the domain. I want to set up a few extra
+	domains and misconfigurations. Misconfiguring something is a way to both learn how not to configure something, and lerning 
+	paths of exploitation. There are two resources I know of which have proven helpful in the past when it comes to AD security.
+	harmj0y.net is a website written by the Will of SpecterOps. He has had his hand in the creation of a framework I know and love, and
+	one I've heard of but never used. Empire and BloodHound are two extremely useful tools which I hope to touch on sometime in this
+	learning path. The other resource is adsecurity.org which is owned and written by Sean metcalf who is a leader in security for 
+	Active Directory. Hopefully we will all learn alot about Active Directory throught this blog thread.
+</p>
+</div>
+</body>
+</html>
+
