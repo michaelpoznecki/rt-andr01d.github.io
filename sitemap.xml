@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://rtandr01d.net/posts/posh-reverse-shell/</loc>
+    <lastmod>2020-07-05T20:39:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://rtandr01d.net/</loc>
+    <lastmod>2020-07-05T20:39:46-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rtandr01d.net/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rtandr01d.net/posts/</loc>
+    <lastmod>2020-07-05T20:39:46-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rtandr01d.net/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rtandr01d.net/tags/untagged/</loc>
+    <lastmod>2020-07-05T20:39:46-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
