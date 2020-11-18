@@ -1,0 +1,262 @@
+
+<html>
+<head>
+  <title>BrainDeadMonkeys</title>
+  <meta charset="UTF-8">
+  <style>
+    
+    body {
+      color: #DDDDDD;
+      /* color: #c5c8c6; */
+      /*background-color: #0d0d18;*/
+      background-color: black;
+    }
+    pre {
+    }
+    a {
+      color: #54d7f9;
+      text-decoration: none;
+    }
+    ik {
+      color: #74ee15;
+    }
+    y {
+      color: #f0c674;
+    }
+    gr {
+      color: #b5bd68;
+    }
+    r {
+      color: #9e0034;
+    }
+    w {
+      color: #ffffff;
+    }
+    pink {
+      color: #f4b6e5;
+    }
+    bb {
+      color: #5cc2ca; /* baby blue */
+    }
+    purp {
+      color: #7a80a2;
+    }
+    l {
+      color: #c5c8c6;
+    }
+    lg {
+      color: #9de9a9;
+    }
+    sea {
+      color: #93ff4c;
+    }
+  </style>
+</head>
+<pre>
+<center>
+
+--------------------------------------------------------------------------------
+ ▄▄▄▄    ██▀███   ▄▄▄       ██▓ ███▄    █ ▓█████▄ ▓█████  ▄▄▄      ▓█████▄ 
+▓█████▄ ▓██ ▒ ██▒▒████▄    ▓██▒ ██ ▀█   █ ▒██▀ ██▌▓█   ▀ ▒████▄    ▒██▀ ██▌
+▒██▒ ▄██▓██ ░▄█ ▒▒██  ▀█▄  ▒██▒▓██  ▀█ ██▒░██   █▌▒███   ▒██  ▀█▄  ░██   █▌
+▒██░█▀  ▒██▀▀█▄  ░██▄▄▄▄██ ░██░▓██▒  ▐▌██▒░▓█▄   ▌▒▓█  ▄ ░██▄▄▄▄██ ░▓█▄   ▌
+░▓█  ▀█▓░██▓ ▒██▒ ▓█   ▓██▒░██░▒██░   ▓██░░▒████▓ ░▒████▒ ▓█   ▓██▒░▒████▓ 
+░▒▓███▀▒░ ▒▓ ░▒▓░ ▒▒   ▓▒█░░▓  ░ ▒░   ▒ ▒  ▒▒▓  ▒ ░░ ▒░ ░ ▒▒   ▓▒█░ ▒▒▓  ▒ 
+▒░▒   ░   ░▒ ░ ▒░  ▒   ▒▒ ░ ▒ ░░ ░░   ░ ▒░ ░ ▒  ▒  ░ ░  ░  ▒   ▒▒ ░ ░ ▒  ▒ 
+ ░    ░   ░░   ░   ░   ▒    ▒ ░   ░   ░ ░  ░ ░  ░    ░     ░   ▒    ░ ░  ░ 
+ ░         ░           ░  ░ ░           ░    ░       ░  ░      ░  ░   ░    
+      ░                                    ░                        ░      
+ ███▄ ▄███▓ ▒█████   ███▄    █  ██ ▄█▀▓█████ ▓██   ██▓  ██████             
+▓██▒▀█▀ ██▒▒██▒  ██▒ ██ ▀█   █  ██▄█▒ ▓█   ▀  ▒██  ██▒▒██    ▒             
+▓██    ▓██░▒██░  ██▒▓██  ▀█ ██▒▓███▄░ ▒███     ▒██ ██░░ ▓██▄               
+▒██    ▒██ ▒██   ██░▓██▒  ▐▌██▒▓██ █▄ ▒▓█  ▄   ░ ▐██▓░  ▒   ██▒            
+▒██▒   ░██▒░ ████▓▒░▒██░   ▓██░▒██▒ █▄░▒████▒  ░ ██▒▓░▒██████▒▒            
+░ ▒░   ░  ░░ ▒░▒░▒░ ░ ▒░   ▒ ▒ ▒ ▒▒ ▓▒░░ ▒░ ░   ██▒▒▒ ▒ ▒▓▒ ▒ ░            
+░  ░      ░  ░ ▒ ▒░ ░ ░░   ░ ▒░░ ░▒ ▒░ ░ ░  ░ ▓██ ░▒░ ░ ░▒  ░ ░            
+░      ░   ░ ░ ░ ▒     ░   ░ ░ ░ ░░ ░    ░    ▒ ▒ ░░  ░  ░  ░              
+       ░       ░ ░           ░ ░  ░      ░  ░ ░ ░           ░              
+                                              ░ ░                          
+--------------------------------------------------------------------------------
+
+by: Lancap
+
+<div style="display: inline-block; text-align:left;">
+
+<p>
+There is a longstanding design trope of Unix called the Rule of Silence. It
+basically says: good programs produce no output, because they can only succeed
+one way. Your `cd` command doesn't display a "Directory Changed" message after
+every movement, nor does `ls` print "Listing directory..." and "Finished!!"
+before and after it runs.  This is good, so the logic goes, because status
+messages get in the way of other programs interpreting your programs output,
+our user has a limited attention span, and programs should only alert
+when something surprising has happened.
+</p>
+<p>
+But then why *do* so many programs opt to display status messages? Most
+consumer software does provide some sort of confirmation that it is, in fact,
+performing the action you told it to. Why is it that Cathy needs her word
+processor to say "SAVED", instead of just inferring from her pressing the
+button that it happened? The answer, in this case, is obvious: Cathy isn't sure.
+Cathy's waiting for some kind of confirmation in the off chance that she didn't
+press the button, she missed some kind of step in the save process, or she
+hadn't noticed a status message that said the write to disk failed. In short,
+Cathy has noticed or is internally hypothesizing some sort of failure rate in
+her attempt to save her word document; perhaps not too large, maybe 3%, but one
+for which the positive indication of "SAVED" is nonetheless appreciated.
+</p>
+<p>
+For novice computer users or people who don't have a good familiarity with the
+tools they're using, a 2% chance of misuse per action is not unreasonable. For
+anyone who's ever built a piece of software without UX consideration and
+watched others try to use it, 2% seems pretty low. If Cathy is just now picking up,
+say, Libreoffice, and isn't just checking for the prompt out of habit, she's
+expressing good judgement in looking for confirmation. The corollary is also
+obvious: if Cathy becomes a more experienced computer user, more trusting of
+her software, she might internally dismiss the "SAVED" notification to save
+time. More confident that if an error occurs, she'll catch it, Cathy begins to
+ignore status messages like "SAVED" and maybe even comes to be annoyed by them.
+</p>
+<p>
+Taking this dynamic to its end, a reasonable Cathy could easily become *more*
+likely to lose her documents now that she's an *experienced* computer user,
+rather than become less likely. In the same way more skilled racecar drivers,
+who feel comfortable attempting more dangerous manuevers and making more
+assumptions about the track, don't necessarily become less likely to crash,
+more knowledgable computer users, who like to try silly things like installing
+Arch Linux, are probably more likely to break their laptop. The software
+ecosystem of Linux has always been talked about being geared to more "advanced"
+computer users, and this aspect of the Unix Philosophy probably reflects that
+tendency. The tools software developers use, when they're not complex enough to
+warrant handholding, generally assume that their users can make inferences
+about a lack of output because they understand what's happening so well.
+</p>
+<p>
+And the problem with this assumption is that people, even experts in their
+field, are terrible at discriminating between 0.01%, 0.1%, and 2%
+probabilities, or not underestimating the likelihood of already improbable
+events. You'll notice earlier I went with a 2% chance of failure, and not 20%,
+10%, or even 5%.  That's because at a hundred discrete actions a session, a 2%
+chance of failure matters a lot. 0.98^100 = ~0.132, or nearly a one in eight
+chance of getting out of that word document *without* being misled about the
+state of the program. In some cases that's fine; either the chance of being
+misled really does seem to be less than 2%, as in the case of `ls`, or the
+opportunity for failure doesn't USUALLY introduce much cause for concern, as in
+the case of fingerfudging `cd`. But sometimes it doesn't, and that's where
+the agony begins.
+</p>
+<p>
+The majority of red teamers will end up finding a challenge, box, or assignment
+they spend twelve or more hours on, without success. There's lots of advice on
+the internet about rabbitholes, and all the trouble and wasted effort they can
+bring. Most I've heard falls into one of these two categories:
+</p>
+<p>
+1) Force yourself to stop and look around every 30 minutes.
+2) Get more experience or underlying familiarity with the technology so that
+you don't find yourself trying things that would never work.
+</p>
+<p>
+'A' really is good advice, but, 'B', I think, has its limits. More familiarity
+can't hurt, but the pathos of computer hacking is to probe software and
+information systems where there *is* uncertainty in output or behavior. Just
+because you have a more complex or nuanced mental model of web servers doesn't
+mean that you are less likely to be surprised, because now you're being forced
+to *juggle that more complex model*. There are exceptionally bright people for
+whom textbooks and CTFs have a one to one correspondence with improved
+understanding systems, but most people are already holding as many things in
+their head as they can. Picking up Modern Operating Systems may help, but it
+may just cause you to invest time in an understanding OS details you're unable
+to consistent apply or sort through in practice even when they are
+theoretically useful.  Chances are your success rate on the cool assembler
+wizardry you're currently attempting is more than one in fifty, and in that
+case running blindly may kill as much time as you save.
+</p>
+<p>
+Although I think that knowing your intellectual limits is important, my advice
+isn't to throw away complex or difficult learning material. There would be
+less than a dozen people in the world doing computer hacking if no one attempted
+anything they couldn't do as consistently as `ls`. Instead, I would add a third
+category:
+</p>
+<p>
+c) Verify everything, and automate everything you can automatically verify.
+</p>
+<p>
+I used to think note-taking software like Cherry Tree were primarily tools used
+to help write reports, or record information for a potential future engagement.
+Not so.  Notes taken during a hackthebox session serve the same purpose as the
+prefix in your terminal indicating the current directory: it takes something
+you'd normally have to keep track of in your head and caches it in a little
+space on your laptop screen. Asking yourself to red team a target, especially a
+real target with lots and lots of attack surface, without taking down these
+status messages is like asking Cathy to write her news article without turning
+her monitor on. Encoding that nmap scan into notes or disk not only frees up
+your mind to worry about and remember different things, it's one less part of
+your working model to be subject to rot and misrememberance. If you're forcing
+yourself to nmap the host again every time you need to remember which ports are
+open, you're risking an opportunity to forget key command flags, what it is
+you were looking for, why you were looking for it...
+</p>
+<p>
+And that two percent adds up. Everything we do as computer hackers is
+conditional and time consuming. A misunderstanding about whether or not some
+text field in a web app is vulnerable can lead to *days* lost slamming heads
+against keyboards. If each of your kitchen ingredients had a two percent chance
+of ruining whatever dish you were cooking, you'd throw them away, but hackers
+will try to win pwn challenges with the dodgiest languages imaginable and not
+recognize the problem when they segfault in C for the 30th time.
+</p>
+<p>
+Part of why I started to develop a framework to manage these details was a
+realization that the average pentester had too many tools and too much
+information to keep track of. I'd tell myself, "remember to scan UDP next
+time", and then not do it. I'd learn about a new scanning tool or technique,
+but when it came time to use it, I just wouldn't have it in mind, or I'd apply
+it incorrectly. It would be infinitely more effective if I had some way of
+automatically launching and operating these tools that I can understand in
+turn, but for which my failure rate in practice is something closer to 5% or
+10%, and then collect status in an organized way. I've been a little
+preoccupied as of late (and have gotten much better at golang since then), but
+my plan is to get the majority of my initial reconnaissaince written as code by
+the end of the year. I won't be able to "automate recon" - if I did I'd have
+solved information security - but my goal is to take the tools I use and bring
+them all into the same output basket, so that I have less of an opportunity to
+trick myself.
+</p>
+<p>
+Of course, for me, building software is fun in of itself. You might say that
+I'm taking it to another level of complexity by rolling my own code, but I
+nonetheless encourage every pentester to find their own way of organizing
+engagements. The next time you make an error that costs you a couple hours, try
+to see if there's a way you can change your environment to prevent that from
+ever happening again. It could be writing some code to accomplish a task you
+performed in multiple finnicky steps before, it could be changing your
+~/.bashrc or a ~/.config file, it could be writing a sticky note on the wall.
+Whatever the case, if you can find a way to modify your tooling so that it
+prevents the issue, rather than just resolve to be more intelligent, you'll 
+be better off.
+</p>
+</div>
+
+<a href="../index.html">Home</a>
+</center>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
